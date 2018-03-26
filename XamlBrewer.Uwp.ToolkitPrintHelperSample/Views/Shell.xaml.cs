@@ -18,6 +18,9 @@ namespace XamlBrewer.Uwp.ToolkitPrinterHelperSample
 
             // Initialize Navigation Service.
             Navigation.Frame = SplitViewFrame;
+
+            // Initialize Printing Service.
+            PrintService.PrintingContainer = PrintingContainer;
         }
 
         // Navigate to another page.

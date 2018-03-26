@@ -102,7 +102,12 @@
     <Compile Include="Services\Activation\ActivationExtensions.cs" />
     <Compile Include="Services\Icons\Icon.cs" />
     <Compile Include="Services\Navigation\Navigation.cs" />
+    <Compile Include="Services\Notification\Toast.cs" />
+    <Compile Include="Services\Printing\PrintPage.xaml.cs">
+      <DependentUpon>PrintPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Services\Printing\PrintService.cs" />
+    <Compile Include="Services\Printing\UIElementExtensions.cs" />
     <Compile Include="Services\Theming\Theme.cs" />
     <Compile Include="ViewModels\MenuItem.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
@@ -128,6 +133,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Background.jpg" />
+    <Content Include="Assets\Toasts\Confused.png" />
+    <Content Include="Assets\Toasts\Printer.png" />
+    <Content Include="Assets\Toasts\Wink.png" />
+    <Content Include="Assets\Toasts\Worried.png" />
+    <Content Include="Assets\world.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -155,6 +165,10 @@
     <Page Include="Services\Icons\Icons.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Services\Printing\PrintPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Services\Theming\Theme.xaml">
       <Generator>MSBuild:Compile</Generator>

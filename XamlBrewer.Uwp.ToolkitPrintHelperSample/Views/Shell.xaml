@@ -54,6 +54,11 @@
     </Page.Resources>
 
     <Grid>
+
+        <!-- Required for the PrintService -->
+        <Grid x:Name="PrintingContainer"
+              Opacity="0" />
+
         <!-- SplitView -->
         <SplitView x:Name="MySplitView"
                    IsPaneOpen="False"
