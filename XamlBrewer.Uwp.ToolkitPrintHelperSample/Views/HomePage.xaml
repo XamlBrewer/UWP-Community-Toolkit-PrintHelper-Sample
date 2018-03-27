@@ -54,6 +54,14 @@
             <Run>This app shows some advanced usages of the UWP Community Toolkit </Run>
             <Hyperlink NavigateUri="https://docs.microsoft.com/en-us/windows/uwpcommunitytoolkit/helpers/printhelper">PrintHelper</Hyperlink>
             <Run> class:</Run>
+            <LineBreak FontFamily="Segoe UI" />
+            <Run>* adding headers and footers,</Run>
+            <LineBreak />
+            <Run>* page numbering,</Run>
+            <LineBreak />
+            <Run>* ..., and</Run>
+            <LineBreak />
+            <Run>* ....</Run>
         </TextBlock>
 
         <!-- Logo -->

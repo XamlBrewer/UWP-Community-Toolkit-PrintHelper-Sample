@@ -34,7 +34,7 @@
                    Margin="0"
                    TextLineBounds="TrimToCapHeight"
                    FontFamily="Segoe UI">
-                <Run>Header and Footer</Run>
+                <Run>Header, Footer, and Page Numbers</Run>
                 <LineBreak />
                 <Run FontSize="20"
                      Foreground="LightSlateGray"

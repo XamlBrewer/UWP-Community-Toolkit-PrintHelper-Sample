@@ -103,6 +103,7 @@
     <Compile Include="Services\Icons\Icon.cs" />
     <Compile Include="Services\Navigation\Navigation.cs" />
     <Compile Include="Services\Notification\Toast.cs" />
+    <Compile Include="Services\Printing\PageNumbering.cs" />
     <Compile Include="Services\Printing\PrintPage.xaml.cs">
       <DependentUpon>PrintPage.xaml</DependentUpon>
     </Compile>

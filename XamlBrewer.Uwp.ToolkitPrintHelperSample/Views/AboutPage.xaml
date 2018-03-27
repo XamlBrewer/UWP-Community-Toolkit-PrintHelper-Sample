@@ -49,9 +49,9 @@
             <Hyperlink NavigateUri="https://docs.microsoft.com/en-us/windows/uwpcommunitytoolkit/helpers/printhelper">PrintHelper</Hyperlink>
             <Run> class:</Run>
             <LineBreak />
-            <Run>* Adding headers and footers,</Run>
+            <Run>* adding headers and footers,</Run>
             <LineBreak />
-            <Run>* ...,</Run>
+            <Run>* page numbering,</Run>
             <LineBreak />
             <Run>* ..., and</Run>
             <LineBreak />

@@ -17,6 +17,9 @@ namespace Mvvm.Services
             Type type = source.GetType();
 
             // Create an instance
+            // May require updates to Default.rd.xml in project properties
+            // to run successfully in Release mode.
+            // https://stackoverflow.com/questions/42185670/activator-createinstancetype-throws-exception
             result = Activator.CreateInstance(type) as T;
 
             CopyProperties<T>(source, result, type);

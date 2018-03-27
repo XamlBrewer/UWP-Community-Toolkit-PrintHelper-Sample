@@ -41,9 +41,10 @@ namespace Mvvm.Services
         {
             _printHelper = new PrintHelper(_printingContainer);
 
+            PrintPage.StartPageNumber = 1;
             foreach (var content in _content)
             {
-                var page = new PrintPage(content, _header, _footer);
+                var page = new PrintPage(content, _header, _footer, PageNumbering.TopRight);
                 _printHelper.AddFrameworkElementToPrint(page);
             }
 
