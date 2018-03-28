@@ -3,6 +3,7 @@ Demonstrates some advanced print features on top of the UWP Community Toolkit Pr
 
 * adding page header and footer,
 * adding page numbers,
+* print a list with all items on a separate page,
 * ...
 
 Core classes are
