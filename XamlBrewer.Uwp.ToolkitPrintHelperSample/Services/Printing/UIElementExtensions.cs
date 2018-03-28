@@ -10,6 +10,10 @@ namespace Mvvm.Services
     {
         public static T DeepClone<T>(this T source) where T : UIElement
         {
+            if (source == null)
+            {
+                return null;
+            }
 
             T result;
 

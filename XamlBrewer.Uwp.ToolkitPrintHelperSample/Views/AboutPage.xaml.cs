@@ -1,6 +1,6 @@
 ﻿using Windows.UI.Xaml.Controls;
 
-namespace XamlBrewer.Uwp.ToolkitPrinterHelperSample
+namespace XamlBrewer.Uwp.ToolkitPrintHelperSample
 {
     public sealed partial class AboutPage : Page
     {

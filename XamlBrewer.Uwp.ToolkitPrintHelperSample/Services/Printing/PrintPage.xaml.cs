@@ -53,6 +53,8 @@ namespace Mvvm.Services
                     case PageNumbering.TopMiddle:
                         Grid.SetRow(pageNumberText, 0);
                         pageNumberText.Margin = new Thickness(0, 0, 0, 20);
+                        pageNumberText.HorizontalAlignment = HorizontalAlignment.Stretch;
+                        pageNumberText.HorizontalTextAlignment = TextAlignment.Center;
                         _printArea.Children.Add(pageNumberText);
                         break;
                     case PageNumbering.TopRight:
@@ -72,6 +74,8 @@ namespace Mvvm.Services
                     case PageNumbering.BottomMidle:
                         Grid.SetRow(pageNumberText, 2);
                         pageNumberText.Margin = new Thickness(0, 20, 0, 0);
+                        pageNumberText.HorizontalAlignment = HorizontalAlignment.Stretch;
+                        pageNumberText.HorizontalTextAlignment = TextAlignment.Center;
                         _printArea.Children.Add(pageNumberText);
                         break;
                     case PageNumbering.BottomRight:
@@ -89,9 +93,12 @@ namespace Mvvm.Services
         {
             set
             {
-                var header = value.DeepClone();
-                Grid.SetRow(header, 0);
-                _printArea.Children.Add(header);
+                if (value != null)
+                {
+                    var header = value.DeepClone();
+                    Grid.SetRow(header, 0);
+                    _printArea.Children.Add(header);
+                }
             }
         }
 
@@ -99,9 +106,12 @@ namespace Mvvm.Services
         {
             set
             {
-                var footer = value.DeepClone();
-                Grid.SetRow(footer, 2);
-                _printArea.Children.Add(footer);
+                if (value != null)
+                {
+                    var footer = value.DeepClone();
+                    Grid.SetRow(footer, 2);
+                    _printArea.Children.Add(footer);
+                }
             }
         }
 

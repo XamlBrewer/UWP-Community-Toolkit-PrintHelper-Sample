@@ -1,5 +1,5 @@
 ﻿using Mvvm.Services;
-using XamlBrewer.Uwp.ToolkitPrinterHelperSample;
+using XamlBrewer.Uwp.ToolkitPrintHelperSample;
 
 namespace Mvvm
 {
@@ -10,6 +10,7 @@ namespace Mvvm
             // Build the menus
             Menu.Add(new MenuItem() { Glyph = Icon.GetIcon("HomeIcon"), Text = "Home", NavigationDestination = typeof(HomePage) });
             Menu.Add(new MenuItem() { Glyph = Icon.GetIcon("MainPageIcon"), Text = "Header", NavigationDestination = typeof(MainPage) });
+            Menu.Add(new MenuItem() { Glyph = Icon.GetIcon("ListPageIcon"), Text = "List", NavigationDestination = typeof(ListPage) });
 
             SecondMenu.Add(new MenuItem() { Glyph = Icon.GetIcon("InfoIcon"), Text = "About", NavigationDestination = typeof(AboutPage) });
         }

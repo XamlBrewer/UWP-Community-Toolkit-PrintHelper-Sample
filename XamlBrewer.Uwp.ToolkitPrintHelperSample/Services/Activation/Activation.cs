@@ -2,7 +2,7 @@
 using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Core;
 using Windows.UI.Xaml;
-using XamlBrewer.Uwp.ToolkitPrinterHelperSample;
+using XamlBrewer.Uwp.ToolkitPrintHelperSample;
 
 namespace Mvvm.Services
 {

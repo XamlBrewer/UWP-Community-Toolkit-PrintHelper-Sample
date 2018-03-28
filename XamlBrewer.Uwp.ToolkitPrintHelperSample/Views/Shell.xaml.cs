@@ -8,7 +8,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Navigation;
 using Mvvm.Services;
 
-namespace XamlBrewer.Uwp.ToolkitPrinterHelperSample
+namespace XamlBrewer.Uwp.ToolkitPrintHelperSample
 {
     public sealed partial class Shell
     {

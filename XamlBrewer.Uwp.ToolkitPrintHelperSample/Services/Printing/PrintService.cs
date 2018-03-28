@@ -13,6 +13,7 @@ namespace Mvvm.Services
         private List<FrameworkElement> _content = new List<FrameworkElement>();
         private FrameworkElement _header;
         private FrameworkElement _footer;
+        private PageNumbering _pageNumbering = PageNumbering.None;
 
         public PrintService()
         {}
@@ -32,6 +33,11 @@ namespace Mvvm.Services
             set { _footer = value; }
         }
 
+        public PageNumbering PageNumbering
+        {
+            set { _pageNumbering = value; }
+        }
+
         public void AddPrintContent(FrameworkElement content)
         {
             _content.Add(content);
@@ -44,7 +50,7 @@ namespace Mvvm.Services
             PrintPage.StartPageNumber = 1;
             foreach (var content in _content)
             {
-                var page = new PrintPage(content, _header, _footer, PageNumbering.TopRight);
+                var page = new PrintPage(content, _header, _footer, _pageNumbering);
                 _printHelper.AddFrameworkElementToPrint(page);
             }
 
