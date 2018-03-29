@@ -11,3 +11,5 @@ Core classes are
 * [PrintPage](https://github.com/XamlBrewer/UWP-Community-Toolkit-PrintHelper-Sample/blob/master/XamlBrewer.Uwp.ToolkitPrintHelperSample/Services/Printing/PrintPage.xaml.cs), a more intelligent print page that knows about headers, footers, page numbering, and maybe more.
 
 ![ScreenShot](Assets/HeaderFooterPageNumbers.png?raw=true "Screenshot")
+
+![ScreenShot](Assets/ListItems.png?raw=true "Screenshot")
