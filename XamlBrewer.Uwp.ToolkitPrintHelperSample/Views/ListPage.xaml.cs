@@ -16,13 +16,7 @@ namespace XamlBrewer.Uwp.ToolkitPrintHelperSample
         {
             get
             {
-                return new List<Moon>
-                {
-                    new Moon { Name = "Callisto", ImagePath = "ms-appx:///Assets/Moons/callisto.png" },
-                    new Moon { Name = "Europa", ImagePath = "ms-appx:///Assets/Moons/europa.png" },
-                    new Moon { Name = "Ganymede", ImagePath = "ms-appx:///Assets/Moons/ganymede.png" },
-                    new Moon { Name = "Not a Moon", ImagePath = "ms-appx:///Assets/Moons/notamoon.png" }
-                };
+                return Moon.Moons;
             }
         }
 
