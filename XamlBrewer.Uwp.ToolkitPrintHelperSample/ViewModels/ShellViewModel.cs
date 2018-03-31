@@ -11,6 +11,7 @@ namespace Mvvm
             Menu.Add(new MenuItem() { Glyph = Icon.GetIcon("HomeIcon"), Text = "Home", NavigationDestination = typeof(HomePage) });
             Menu.Add(new MenuItem() { Glyph = Icon.GetIcon("MainPageIcon"), Text = "Header", NavigationDestination = typeof(MainPage) });
             Menu.Add(new MenuItem() { Glyph = Icon.GetIcon("ListPageIcon"), Text = "List", NavigationDestination = typeof(ListPage) });
+            Menu.Add(new MenuItem() { Glyph = Icon.GetIcon("ReportPageIcon"), Text = "Report", NavigationDestination = typeof(ReportPage) });
 
             SecondMenu.Add(new MenuItem() { Glyph = Icon.GetIcon("InfoIcon"), Text = "About", NavigationDestination = typeof(AboutPage) });
         }
