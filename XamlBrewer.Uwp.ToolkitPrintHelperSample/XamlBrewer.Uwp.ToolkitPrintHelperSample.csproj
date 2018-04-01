@@ -144,6 +144,7 @@
     <Content Include="Assets\Moons\callisto.png" />
     <Content Include="Assets\Moons\europa.png" />
     <Content Include="Assets\Moons\ganymede.png" />
+    <Content Include="Assets\Moons\mimas.png" />
     <Content Include="Assets\Moons\notamoon.png" />
     <Content Include="Assets\Toasts\Confused.png" />
     <Content Include="Assets\Toasts\Printer.png" />
