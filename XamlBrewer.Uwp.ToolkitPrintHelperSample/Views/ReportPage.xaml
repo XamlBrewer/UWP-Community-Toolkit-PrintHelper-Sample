@@ -18,19 +18,68 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
-                <TextBlock Text="{Binding Name}"
-                           FontSize="48"
-                           Foreground="DarkSlateBlue"
-                           Margin="0"
-                           Grid.Row="2"
-                           FontFamily="Segoe UI" />
                 <TextBlock Text="{Binding Description}"
                            Foreground="DarkSlateBlue"
                            FontSize="18"
                            TextWrapping="Wrap"
-                           Margin="0 20 0 0"
+                           Margin="0"
                            Grid.Row="0"
                            FontFamily="Segoe UI" />
+                <TextBlock Text="{Binding Name}"
+                           FontSize="48"
+                           Foreground="DarkSlateBlue"
+                           Margin="0 20 0 0"
+                           Grid.Row="2"
+                           FontFamily="Segoe UI" />
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Name="CharacteristicsTemplate">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <TextBlock Text="Planet"
+                           FontWeight="SemiBold"
+                           HorizontalAlignment="Right"
+                           Margin="0 0 10 10" />
+                <TextBlock Text="{Binding Planet}"
+                           Margin="10 0 0 10"
+                           Grid.Column="1" />
+                <TextBlock Text="Mass"
+                           FontWeight="SemiBold"
+                           HorizontalAlignment="Right"
+                           Margin="0 0 10 10"
+                           Grid.Row="1" />
+                <TextBlock Text="{Binding Mass}"
+                           Margin="10 0 0 10"
+                           Grid.Row="1"
+                           Grid.Column="1" />
+                <TextBlock Text="Albedo"
+                           FontWeight="SemiBold"
+                           Margin="0 0 10 10"
+                           HorizontalAlignment="Right"
+                           Grid.Row="2" />
+                <TextBlock Text="{Binding Albedo}"
+                           Margin="10 0 0 10"
+                           Grid.Row="2"
+                           Grid.Column="1" />
+                <TextBlock Text="Orbital Eccentricity"
+                           FontWeight="SemiBold"
+                           HorizontalAlignment="Right"
+                           Margin="0 0 10 10"
+                           Grid.Row="3" />
+                <TextBlock Text="{Binding OrbitalEccentricity}"
+                           Margin="10 0 0 10"
+                           Grid.Row="3"
+                           Grid.Column="1" />
             </Grid>
         </DataTemplate>
         <DataTemplate x:Name="ReportTemplate">
@@ -59,6 +108,10 @@
                            Margin="10 0 0 10"
                            Grid.Row="1"
                            Grid.Column="1" />
+                <ContentControl DataContext="{Binding SelectedMoon}"
+                                ContentTemplate="{StaticResource CharacteristicsTemplate}" HorizontalAlignment="Center"
+                                Margin="0 0 10 10"
+                                Grid.Row="2" />
             </Grid>
         </DataTemplate>
 
@@ -138,9 +191,10 @@
                     <ContentControl DataContext="{x:Bind SelectedMoon}"
                                     ContentTemplate="{StaticResource DescriptionTemplate}" />
                 </Grid>
-                <Grid Background="Yellow"
-                      Height="500"
-                      Width="500">
+                <Grid Height="500"
+                      Width="250">
+                    <ContentControl DataContext="{x:Bind SelectedMoon}"
+                                    ContentTemplate="{StaticResource CharacteristicsTemplate}" />
                 </Grid>
                 <Grid Background="Green"
                       Height="500"
