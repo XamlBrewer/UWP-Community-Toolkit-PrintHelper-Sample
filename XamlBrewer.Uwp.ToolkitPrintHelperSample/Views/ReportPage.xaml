@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart"
       mc:Ignorable="d">
 
     <Page.Resources>
@@ -82,9 +83,41 @@
                            Grid.Column="1" />
             </Grid>
         </DataTemplate>
+        <DataTemplate x:Name="BarChartTemplate">
+            <telerikChart:RadCartesianChart>
+                <telerikChart:RadCartesianChart.VerticalAxis>
+                    <telerikChart:LinearAxis Minimum="0"
+                                             Maximum="1"
+                                             Title="Albedo"
+                                             FontFamily="Segoe UI" />
+                </telerikChart:RadCartesianChart.VerticalAxis>
+                <telerikChart:RadCartesianChart.HorizontalAxis>
+                    <telerikChart:CategoricalAxis />
+                </telerikChart:RadCartesianChart.HorizontalAxis>
+                <telerikChart:BarSeries ItemsSource="{Binding}">
+                    <telerikChart:BarSeries.DefaultVisualStyle>
+                        <Style TargetType="Border">
+                            <Setter Property="Background"
+                                    Value="DodgerBlue" />
+                            <Setter Property="BorderBrush"
+                                    Value="Black" />
+                            <Setter Property="BorderThickness"
+                                    Value="1" />
+                        </Style>
+                    </telerikChart:BarSeries.DefaultVisualStyle>
+                    <telerikChart:BarSeries.CategoryBinding>
+                        <telerikChart:PropertyNameDataPointBinding PropertyName="Name" />
+                    </telerikChart:BarSeries.CategoryBinding>
+                    <telerikChart:BarSeries.ValueBinding>
+                        <telerikChart:PropertyNameDataPointBinding PropertyName="Albedo" />
+                    </telerikChart:BarSeries.ValueBinding>
+                </telerikChart:BarSeries>
+            </telerikChart:RadCartesianChart>
+        </DataTemplate>
         <DataTemplate x:Name="ReportTemplate">
             <Grid>
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="*" />
@@ -109,9 +142,17 @@
                            Grid.Row="1"
                            Grid.Column="1" />
                 <ContentControl DataContext="{Binding SelectedMoon}"
-                                ContentTemplate="{StaticResource CharacteristicsTemplate}" HorizontalAlignment="Center"
+                                ContentTemplate="{StaticResource CharacteristicsTemplate}"
+                                HorizontalAlignment="Center"
                                 Margin="0 0 10 10"
                                 Grid.Row="2" />
+                <ContentControl RequestedTheme="Dark"
+                                DataContext="{Binding Moons}"
+                                ContentTemplate="{StaticResource BarChartTemplate}"
+                                HorizontalAlignment="Center"
+                                Margin="0 0 0 0"
+                                Grid.ColumnSpan="2"
+                                Grid.Row="3" />
             </Grid>
         </DataTemplate>
 
@@ -196,14 +237,15 @@
                     <ContentControl DataContext="{x:Bind SelectedMoon}"
                                     ContentTemplate="{StaticResource CharacteristicsTemplate}" />
                 </Grid>
-                <Grid Background="Green"
+                <Grid Height="500"
+                      Width="500">
+                    <ContentControl DataContext="{x:Bind Moons}"
+                                    ContentTemplate="{StaticResource BarChartTemplate}" />
+                </Grid>
+                <!--<Grid Background="Pink"
                       Height="500"
                       Width="500">
-                </Grid>
-                <Grid Background="Pink"
-                      Height="500"
-                      Width="500">
-                </Grid>
+                </Grid>-->
             </ListView>
         </Grid>
 
